@@ -3,11 +3,168 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 1rem;
+	line-height: 1rem;
 	font-weight: 400;
 	font-family: Inter, Roboto, sans-serif;
 	overflow-x: hidden;
-	background: #010101;
-	color: white;
+	background: var(--primary);
+	color: var(--light);
+	max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button {
+	font-family: Inter, Roboto, sans-serif;
+	border: none;
+	background: none;
+	outline: none;
+	color: var(--light);
+	font-size: 1rem;
+	padding: 0;
+}
+
+a {
+	color: var(--light);
+	text-decoration: none;
+}
+
+section {
+	position: relative;
+	z-index: 1;
+}
+
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 75rem;
+	margin: 0 auto;
+
+	@media only screen and (max-width: 85.375rem) {
+		width: calc(100vw - 1.875rem);
+		padding: 0 .9375rem;
+	}
+}
+
+.icon {
+	width: .75rem;
+	height: .75rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+h2 {
+	color: var(--light);
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	@media only screen and (max-width: 85.375rem) {
+		font-size: 1.125rem;
+	}
+}
+
+.button-more {
+	color: var(--light);
+	font-size: .875rem;
+	font-weight: 900;
+	text-decoration-line: underline;
+	text-transform: uppercase;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 2.5rem;
+	cursor: pointer;
+	transition: color 0.25s;
+
+	&:hover {
+		color: var(--action);
+	}
+
+	@media only screen and (max-width: 85.375rem) {
+		font-size: .75rem;
+		margin-top: 1.5625rem;
+	}
+}
+
+.loader {
+	min-height: 20vh;
+	width: 100%;
+	position: relative;
+	@include flex;
+
+	img {
+		max-width: 3.125rem;
+		animation: beat 0.75s linear infinite;
+	}
+}
+
+.page {
+	padding: 2.5rem 0;
+
+	&-title {
+		color: var(--light);
+		font-size: 3.75rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 125%;
+
+		@media only screen and (max-width: 85.375rem) {
+			font-size: 2.5rem;
+		}
+
+		@media only screen and (max-width: 46.875rem) {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.9);
+	}
 }

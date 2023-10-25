@@ -1,6 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+// reducers
+import tourReducer from "../reducers/tourReducer";
+
 export const store = configureStore({
-	reducer: {},
+	reducer: {
+		tour: tourReducer,
+
+	},
 	devTools: true,
 })

@@ -1,1 +1,8 @@
-@import url(./reset.scss)
+@import "./mixins.scss";
+@import "./vaiables.scss";
+@import "./reset.scss";
+
+@import "./header.scss";
+@import "./banner.scss";
+@import "./tour.scss";
+// @import ".";

@@ -1,0 +1,47 @@
+.header {
+	z-index: 2;
+}
+header {
+	padding-top: 1.25rem;
+	display: grid;
+	grid-template-columns: 1fr max-content 1fr;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.socials {
+	@include flex;
+	column-gap: 0.625rem;
+	justify-content: flex-end;
+	svg {
+		fill: var(--light);
+		width: 1rem;
+		height: 1rem;
+		transition: fill 0.25s ease;
+	}
+	&-item {
+		&:hover {
+			svg {
+				fill: var(--action);
+			}
+		}
+	}
+}
+
+.menu {
+	@include flex;
+	column-gap: 1rem;
+	&-item {
+		a {
+			color: var(--light);
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			transition: color 0.25s ease;
+
+			&:hover {
+				color: var(--action);
+			}
+		}
+	}
+}
