@@ -1,0 +1,214 @@
+.tracks {
+	padding: 1rem 0 2rem 0;
+	margin-top: 1.25rem;
+
+	@media only screen and (max-width: 85.375rem) {
+		margin-top: 0;
+	}
+
+	&-section {
+		padding: 3.125rem 0;
+	}
+
+	&-list {
+		margin-top: 2.5rem;
+
+		&__item {
+			display: grid;
+			gap: 1.5rem;
+			grid-template-columns: 18.75rem 1fr;
+			grid-template-rows: auto 2.5rem;
+			grid-template-areas:
+				"image info"
+				"image button";
+
+			@media only screen and (max-width: 85.375rem) {
+				grid-template-columns: 1fr;
+				grid-template-rows: max-content;
+				justify-content: center;
+				grid-template-areas:
+					"image"
+					"info"
+					"button";
+			}
+
+			@media only screen and (max-width: 46.875rem) {
+				gap: .625rem;
+			}
+
+			&-image {
+				grid-area: image;
+				width: 100%;
+				height: 18.75rem;
+
+				@media only screen and (max-width: 85.375rem) {
+					height: 11.5rem;
+				}
+
+				img {
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			&-info {
+				grid-area: info;
+			}
+
+			&-date {
+				color: var(--grey);
+				font-size: .875rem;
+				text-transform: uppercase;
+
+				@media only screen and (max-width: 46.875rem) {
+					font-size: .75rem;
+				}
+			}
+
+			&-title {
+				color: var(--light);
+				font-size: 1.5rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin: 1rem 0;
+				line-height: 115%;
+
+				@media only screen and (max-width: 46.875rem) {
+					margin: .625rem 0;
+					font-size: 1.125rem;
+				}
+			}
+
+			&-description {
+				color: var(--light);
+				font-size: .875rem;
+				font-weight: 500;
+				line-height: 1.5rem;
+
+				@media only screen and (max-width: 46.875rem) {
+					font-size: .75rem;
+					line-height: 1.125rem;
+				}
+			}
+
+			&-button {
+				@include button;
+				grid-area: button;
+				width: 13.3125rem;
+				padding: .75rem;
+
+				@media only screen and (max-width: 46.875rem) {
+					width: 100%;
+				}
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+}
+
+.track {
+	text-transform: uppercase;
+	width: max-content;
+	display: grid;
+	gap: 1rem;
+	position: relative;
+	grid-template-columns: 18.75rem 1fr;
+	grid-template-areas:
+		"image date"
+		"title .";
+	max-width: 100%;
+
+	@media only screen and (max-width: 46.875rem) {
+		gap: .625rem;
+		grid-template-rows: max-content 1fr;
+		grid-template-areas:
+			"image date"
+			"image title";
+	}
+
+	@media only screen and (max-width: 85.375rem) {
+		grid-template-columns: 12.5rem 1fr;
+	}
+
+	&-item {
+		@media only screen and (max-width: 46.875rem) {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&:nth-child(2n) {
+			.track {
+				margin-left: auto;
+				grid-template-columns: 1fr 18.75rem;
+				grid-template-areas:
+					"date image"
+					". title";
+
+				@media only screen and (max-width: 85.375rem) {
+					grid-template-columns: 1fr 12.5rem;
+				}
+
+				@media only screen and (max-width: 46.875rem) {
+					grid-template-areas:
+						"date image"
+						"title image";
+				}
+			}
+		}
+	}
+
+	&-image {
+	cursor: pointer;
+		grid-area: image;
+		width: 100%;
+		height: 12.75rem;
+		position: relative;
+
+		@media only screen and (max-width: 85.375rem) {
+			height: 8.5rem;
+		}
+
+		img {
+			object-fit: cover;
+		}
+
+		.icon {
+			&-pause {
+				width: 6.25rem;
+				height: 6.25rem;
+				fill: var(--light);
+				@include center;
+			}
+		}
+	}
+
+	&-date {
+		color: var(--grey);
+		font-size: .875rem;
+		grid-area: date;
+	}
+
+	&-title {
+		color: var(--light);
+		font-weight: 400;
+		font-size: 1.5rem;
+		line-height: 125%;
+		position: absolute;
+		grid-area: title;
+		top: 100%;
+		z-index: 2;
+
+		@media only screen and (max-width: 85.375rem) {
+			font-size: 1.125rem;
+		}
+
+		@media only screen and (max-width: 46.875rem) {
+			position: relative;
+			top: 0;
+		}
+	}
+}

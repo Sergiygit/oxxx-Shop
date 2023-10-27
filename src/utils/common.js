@@ -20,6 +20,14 @@ export const request = async (query) => {
 	}
 };
 
-export const sortByDate = (arr)=>{
-	return arr.sort((a,b)=> new Date(a.date) - new Date(b.date))
+export const sortByDate = (arr) => {
+	return arr.sort((a, b) => new Date(a.date) - new Date(b.date))
+}
+
+export const getLocalDateString = (date, { month = 'numeric', day = 'numeric', year = 'numeric' }) => {
+	return new Date(date).toLocaleDateString('uk-UA', {
+		month,
+		day,
+		year
+	})
 }

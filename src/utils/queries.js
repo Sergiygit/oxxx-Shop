@@ -16,3 +16,41 @@ export const tourItemCollectionQuery = `
     }
   }
 `;
+
+export const trakItemCollectionQuery = `
+  {
+    trackCollection {
+      items {
+        sys {
+          id
+        }
+		  date
+		  title
+		  description
+		  link {
+			url
+		  }
+		  cover {
+			url
+		  }
+      }
+    }
+  }
+`;
+
+export const newsItemCollectionQuery = `
+  {
+   newsItemCollection {
+      items {
+        sys {
+          id
+        }
+		  title
+		  date
+		  cover {
+			url
+		  }
+      }
+    }
+  }
+`;

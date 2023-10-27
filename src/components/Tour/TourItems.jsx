@@ -1,23 +1,19 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { getTourItems } from '../../reducers/tourReducer'
+
+import { useTourItems } from '../../hooks/useTourItems'
 import { sortByDate } from '../../utils/common'
 
 
 // components
+import Preloader from '../Preloader/Preloader'
 import Section from '../Section/Section'
 import SectionTitle from '../Title/SectionTitle'
 import TourItem from './TourItem'
 
 const TourItems = () => {
-	const dispatch = useDispatch()
 
-	const { items = [], isLoading } = useSelector(({ tour }) => tour);
-
-	useEffect(() => {
-		dispatch(getTourItems())
-	}, [dispatch])
+	const { items = [], isLoading } = useTourItems();
 
 	const filtered =
 		sortByDate(
@@ -30,7 +26,7 @@ const TourItems = () => {
 		<Section className="tour">
 			<div className='container'>
 				<SectionTitle text='Концерти' />
-				{isLoading ? 'LOADING' : (
+				{isLoading ? <Preloader /> : (
 					<ul className='tour-list'>
 						{
 							filtered.map((item, i) => (

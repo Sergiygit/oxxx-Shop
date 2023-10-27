@@ -1,5 +1,6 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { getLocalDateString } from '../../utils/common'
 
 // components
 import Icon from '../Icon/Icon'
@@ -16,15 +17,11 @@ const TourItem = ({
 }) => {
 	return (
 		<li>
-			<ScrollAnimation className='tour-item' animateIn='fadeInLeft' animateOut='fadeOutRight' delay={i * 100} offset={260}>
+			<ScrollAnimation className='tour-item' animateIn='fadeInLeft' animateOut='fadeOutRight' delay={i * 100} offset={offset}>
 				<div className='tour-item__info'>
 					<div className="tour-item__date">
 						{
-							new Date(date).toLocaleDateString('uk-UA', {
-								month: 'numeric',
-								day: 'numeric',
-								year: 'numeric'
-							})
+							getLocalDateString(date, {})
 						}
 					</div>
 					<p className='tour-item__place'>{place}</p>

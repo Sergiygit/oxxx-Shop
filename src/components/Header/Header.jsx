@@ -26,7 +26,7 @@ const Header = () => {
 									animateIn="fadeInDown"
 									delay={i * 100}
 									offset={0}>
-									<NavLink to={`/${link}`}>
+									<NavLink className={({ isActive})=> (isActive ? "active" : '')} to={`/${link}`}>
 										{name}
 									</NavLink>
 								</ScrollAnimation>

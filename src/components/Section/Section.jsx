@@ -8,7 +8,7 @@ const Section = ({ children, ...rest }) => {
 
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		offset: ['start', 'start', 'end start']
+		offset: ["start start", "end start"],
 	})
 	const backgroundY = useTransform(scrollYProgress, [0, 2], ['0%', '100%']);
 	return (

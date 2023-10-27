@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "contentful": "^10.6.4",
     "framer-motion": "^10.16.4",
+    "overlay-loading-react": "^1.0.6",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18.2.0",
