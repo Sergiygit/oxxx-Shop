@@ -1,11 +1,6 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
-
-
-// redux
-import { useDispatch, useSelector } from 'react-redux';
-import { getNewsItems } from '../../reducers/newsReducer';
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,20 +13,15 @@ import SectionTitle from '../Title/SectionTitle';
 import Icon from '../Icon/Icon';
 import { SLIDER_BUTTON_TYPES } from '../../utils/constants';
 import Preloader from '../Preloader/Preloader';
+import { useNewsItems } from '../../hooks/useNewsitems';
 
 const News = () => {
 	const { PREV, NEXT } = SLIDER_BUTTON_TYPES
 
 
 	const sliderRef = useRef()
-	const dispatch = useDispatch();
 
-	const { items = [], isLoading } = useSelector(({ news }) => news);
-
-	useEffect(() => {
-		dispatch(getNewsItems())
-	}, [dispatch])
-
+	const { items = [], isLoading } = useNewsItems();
 
 	// navigation swiper
 	const handleButtonClick = useCallback((type) => {

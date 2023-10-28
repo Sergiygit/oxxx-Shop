@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Home/Home'
+import NewsPage from '../News/NewsPage'
+import NewsSingle from '../News/NewsSingle'
 import TourPage from '../Tour/TourPage'
 import Trackspage from '../Tracks/Trackspage'
 
@@ -9,6 +11,8 @@ const AppRoutes = () => (
 		<Route index element={<Home />} />
 		<Route path='/tour' element={<TourPage />} />
 		<Route path='/tracks' element={<Trackspage />} />
+		<Route path='/news' element={<NewsPage />} />
+		<Route path='/news/:id' element={<NewsSingle />} />
 	</Routes>
 )
 
