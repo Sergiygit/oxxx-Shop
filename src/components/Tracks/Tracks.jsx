@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
+import { useMusicPlayer } from '../../hooks/useMusicPlayer';
 import { useTrackItems } from '../../hooks/useTrackItem';
 import { getLocalDateString } from '../../utils/common';
 import Icon from '../Icon/Icon';
@@ -12,22 +13,8 @@ import SectionTitle from '../Title/SectionTitle';
 const Tracks = () => {
 	const { items = [], isLoading } = useTrackItems()
 
-	const [audio] = useState(new Audio())
-	const [playing, setPlaying] = useState(false)
-	const [currentTrack, setCurrentTrack] = useState(null)
+	const { playing, handleTrackClick, currentTrack } = useMusicPlayer()
 
-	const handleTrackClick = (track) => {
-		setPlaying((prev) => {
-			const isPlaying = track.sys.id === currentTrack?.sys?.id ? !prev : true;
-
-			audio.src = track.link.url;
-			!isPlaying ? audio.pause() : audio.play();
-
-			return isPlaying;
-		});
-
-		setCurrentTrack(track);
-	};
 
 	return (
 		<Section className="tracks-section">

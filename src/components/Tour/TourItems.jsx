@@ -18,12 +18,12 @@ const TourItems = () => {
 	const filtered =
 		sortByDate(
 			items
-				// .filter(({ soldOut, ticketLink }) => !soldOut && ticketLink)
+				.filter(({ soldOut, ticketLink }) => !soldOut && ticketLink)
 				.filter((_, i) => i < 5)
 		);
 
 	return (
-		<Section className="tour">
+		<section className="tour">
 			<div className='container'>
 				<SectionTitle text='Концерти' />
 				{isLoading ? <Preloader /> : (
@@ -39,7 +39,7 @@ const TourItems = () => {
 					Всі концерти
 				</Link>
 			</div>
-		</Section>
+		</section>
 	)
 }
 export default TourItems

@@ -8,16 +8,16 @@ const Section = ({ children, ...rest }) => {
 
 	const { scrollYProgress } = useScroll({
 		target: ref,
-		offset: ["start start", "end start"],
+		offset: [ "end start"],
 	})
+
 	const backgroundY = useTransform(scrollYProgress, [0, 2], ['0%', '100%']);
 	return (
-		<section {...rest} ref={ref}>
-			<motion.div
-				style={{ y: backgroundY }}>
-				{children}
-			</motion.div>
-		</section>
+		<motion.section
+			{...rest} ref={ref}
+			style={{ y: backgroundY }}>
+			{children}
+		</motion.section>
 	)
 }
 

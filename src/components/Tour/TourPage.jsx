@@ -40,11 +40,11 @@ const TourPage = () => {
 								</li>
 							))}
 						</ul>
-						<ul className='tour-items'>
-							{filtered.map((item, idx) => (
-								<TourItem offset={100} key={item.sys.id} {...item} i={idx} />
-							))}
-						</ul>
+							<ul className='tour-items'>
+								{filtered.map((item, idx) => (
+									<TourItem offset={100} key={item.sys.id} {...item} i={idx} />
+								))}
+							</ul>
 					</>
 				)}
 			</div>

@@ -11,6 +11,7 @@ import { MENU } from '../../utils/constants'
 //component
 import Logo from '../Logo/Logo'
 import Socials from '../Socials/Socials'
+import Hamburger from './Hamburger'
 
 const Header = () => {
 	return (
@@ -26,7 +27,7 @@ const Header = () => {
 									animateIn="fadeInDown"
 									delay={i * 100}
 									offset={0}>
-									<NavLink className={({ isActive})=> (isActive ? "active" : '')} to={`/${link}`}>
+									<NavLink className={({ isActive }) => (isActive ? "active" : '')} to={`/${link}`}>
 										{name}
 									</NavLink>
 								</ScrollAnimation>
@@ -34,6 +35,7 @@ const Header = () => {
 						}
 					</nav>
 					<Socials />
+					<Hamburger />
 				</header>
 			</div>
 		</section>

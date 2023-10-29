@@ -5,7 +5,6 @@ import Section from '../Section/Section'
 
 // images
 import logo from '../../images/oxxxyshop.webp'
-import bannerImg from '../../images/banner.webp'
 
 const ShopBanner = () => {
 	return (
@@ -20,7 +19,7 @@ const ShopBanner = () => {
 							offset={260}
 						>
 							<p className="shop-banner__subtitle">
-								ОБНОВЛЕННЫЙ МЕРЧ 
+								ОБНОВЛЕННЫЙ МЕРЧ
 							</p>
 							<p className="shop-banner__title">SHOP 2.0</p>
 						</ScrollAnimation>
@@ -30,13 +29,6 @@ const ShopBanner = () => {
 							className="shop-banner__logo"
 						>
 							<img src={logo} alt="shop" className="shop-logo" />
-						</ScrollAnimation>
-						<ScrollAnimation
-							animateIn="fadeInRight"
-							animateOut="fadeOutRight"
-							className="shop-banner__image"
-						>
-							<img src={bannerImg} alt="shopBanner" />
 						</ScrollAnimation>
 					</Link>
 				</div>

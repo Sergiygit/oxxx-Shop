@@ -61,10 +61,12 @@
 	&-banner {
 		position: relative;
 		padding-top: 32px;
+	
 
 		video {
 			width: 100%;
 			height: auto;
+			// max-height: 500px
 		}
 	}
 
