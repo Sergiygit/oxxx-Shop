@@ -15,7 +15,6 @@ const Tracks = () => {
 
 	const { playing, handleTrackClick, currentTrack } = useMusicPlayer()
 
-
 	return (
 		<Section className="tracks-section">
 			<div className="container">

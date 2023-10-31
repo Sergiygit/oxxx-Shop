@@ -55,24 +55,6 @@ export const newsItemCollectionQuery = `
   }
 `;
 
-// export const newsItemQuery = (id) => `
-// {
-//   newsItem(id: "${id}") {
-//     sys {
-//       id
-//     }
-//     title
-//     date
-   //  cover {
-   //    url
-   //  }
-//     description {
-//       json
-//     }
-//   }
-// }
-// `;
-
 export const newsItemQuery = (id) => `
 {
   newsItem(id: "${id}") {
@@ -88,5 +70,25 @@ export const newsItemQuery = (id) => `
 		json
 	 }
   }
+}
+`;
+
+export const shopItemCollectionQuery = `
+{
+	shopItemCollection {
+		items {
+		  sys {
+			 id
+		  }
+		  price
+		 title
+		  cover { 
+			url
+			}
+			description
+			discount
+			category
+		}
+	 }
 }
 `;

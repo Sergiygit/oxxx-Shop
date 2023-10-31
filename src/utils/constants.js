@@ -14,7 +14,7 @@ export const MENU = [
 		link: "news",
 	},
 	{
-		name: "OXXXYSHOP",
+		name: "SHOP",
 		link: "shop",
 	},
 ];

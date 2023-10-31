@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import newsReducer from "../reducers/newsReducer";
+import shopReducer from "../reducers/shopReducer";
 
 // reducers
 import tourReducer from "../reducers/tourReducer";
@@ -10,6 +11,7 @@ export const store = configureStore({
 		tour: tourReducer,
 		tracks: tracksReducer,
 		news: newsReducer,
+		shop: shopReducer,
 	},
 	devTools: true,
 })
