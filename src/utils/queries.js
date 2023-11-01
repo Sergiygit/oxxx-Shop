@@ -92,3 +92,21 @@ export const shopItemCollectionQuery = `
 	 }
 }
 `;
+
+export const shopItemQuery = (id) => `
+{
+	shopItem(id: "${id}") {
+    sys {
+      id
+    }
+	 price
+	 title
+	  cover { 
+		url
+		}
+		description
+		discount
+		category
+  }
+}
+`;

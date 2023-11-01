@@ -3,10 +3,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // utils
 import { request } from "../utils/common";
-import { shopItemCollectionQuery } from "../utils/queries";
+import { shopItemCollectionQuery, shopItemQuery } from "../utils/queries";
 
 const initialState = {
 	items: [],
+	item: null,
 	isLoading: false,
 };
 
@@ -25,6 +26,22 @@ export const getShopsItems = createAsyncThunk(
 		}
 	}
 );
+
+// item
+export const getShopItem = createAsyncThunk(
+	"shopItem/getShopItem",
+	async (id, thunkAPI) => {
+		try {
+			const data = await request(shopItemQuery(id));
+			console.log(data.shopItem)
+			return data.shopItem;
+		} catch (err) {
+			return thunkAPI.rejectWithValue(err);
+		}
+	}
+);
+
+
 const shopItemSlice = createSlice({
 	name: "shopItem",
 	initialState,
@@ -40,7 +57,19 @@ const shopItemSlice = createSlice({
 			})
 			.addCase(getShopsItems.rejected, (state) => {
 				state.isLoading = false;
-			});
+			})
+
+			.addCase(getShopItem.pending, (state) => {
+				state.isLoading = true;
+			})
+			.addCase(getShopItem.fulfilled, (state, { payload }) => {
+				state.isLoading = false;
+				state.item = payload;
+			})
+			.addCase(getShopItem.rejected, (state) => {
+				state.isLoading = false;
+			})
+
 	},
 });
 

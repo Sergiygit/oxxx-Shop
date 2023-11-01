@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from '../Home/Home'
 import NewsPage from '../News/NewsPage'
 import NewsSingle from '../News/NewsSingle'
+import ShopItem from '../Shop/ShopItem'
 import ShopPage from '../Shop/ShopPage'
 import TourPage from '../Tour/TourPage'
 import Trackspage from '../Tracks/Trackspage'
@@ -13,6 +14,7 @@ const AppRoutes = () => (
 		<Route path='/tour' element={<TourPage />} />
 		<Route path='/tracks' element={<Trackspage />} />
 		<Route path='/shop' element={<ShopPage />} />
+		<Route path='/shop/:id' element={<ShopItem />} />
 		<Route path='/news' element={<NewsPage />} />
 		<Route path='/news/:id' element={<NewsSingle />} />
 	</Routes>

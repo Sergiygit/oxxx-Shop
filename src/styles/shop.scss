@@ -112,7 +112,33 @@ $easing: cubic-bezier(0.4, 0, 0.2, 1);
 				}
 			}
 		}
+		&__category {
+			display: flex;
+			gap: 0.625rem;
+			align-items: center;
+			margin: 3.125rem 0 2.75rem;
+			flex-wrap: wrap;
+			&-item {
+				padding: 1rem 4.0625rem;
+				border: 1px solid;
+				text-align: center;
+				border-color: var(--black-color);
+				font-weight: 500;
+				font-size: 1.0625rem;
+				line-height: 140%;
+				letter-spacing: 0.02em;
+				color: var(--black-color);
+				transition: all 0.3s ease-in;
+				cursor: pointer;
+				&:hover {
+					background: var(--action);
+					color: var(--light);
+				}
+			}
+			.active {
+				background: var(--action);
+				color: var(--light);
+			}
+		}
 	}
-}
-.product {
 }

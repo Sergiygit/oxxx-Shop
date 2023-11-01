@@ -14,7 +14,7 @@ import ScrollToTop from "./utils/scrollToTop";
 const root = createRoot(document.getElementById("root"));
 root.render(
 	<Provider store={store}>
-		<BrowserRouter>
+		<BrowserRouter scrollBehavior="smooth">
 			<ScrollToTop />
 			<App />
 		</BrowserRouter>
