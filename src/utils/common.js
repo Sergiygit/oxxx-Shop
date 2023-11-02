@@ -85,3 +85,7 @@ export const getAsset = async (assetId) => {
 		console.log(err);
 	}
 };
+
+ export const calculateDiscountedPrice = (price, discount) => {
+	return discount ? price - (price * (discount / 100)) : price;
+};

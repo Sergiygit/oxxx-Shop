@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
 import { useMusicPlayer } from '../../hooks/useMusicPlayer';

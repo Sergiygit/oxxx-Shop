@@ -7,7 +7,6 @@ import { sortByDate } from '../../utils/common'
 
 // components
 import Preloader from '../Preloader/Preloader'
-import Section from '../Section/Section'
 import SectionTitle from '../Title/SectionTitle'
 import TourItem from './TourItem'
 

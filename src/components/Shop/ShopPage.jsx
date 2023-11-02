@@ -103,9 +103,6 @@ const ShopPage = () => {
 	const [filtered, setFiltered] = useState([]);
 
 
-
-
-	console.log(filtered)
 	return (
 		<Section className="shop-section page">
 			<div className="container">
