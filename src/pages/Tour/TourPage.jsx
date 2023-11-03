@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
 import { useTourItems } from '../../hooks/useTourItems';
-import Preloader from '../Preloader/Preloader';
-import PageTitle from '../Title/PageTitle';
+
+import Preloader from '../../components/Preloader/Preloader';
+import PageTitle from '../../components/Title/PageTitle';
 import TourItem from './TourItem';
 
 const TourPage = () => {
@@ -40,11 +41,11 @@ const TourPage = () => {
 								</li>
 							))}
 						</ul>
-							<ul className='tour-items'>
-								{filtered.map((item, idx) => (
-									<TourItem offset={100} key={item.sys.id} {...item} i={idx} />
-								))}
-							</ul>
+						<ul className='tour-items'>
+							{filtered.map((item, idx) => (
+								<TourItem offset={100} key={item.sys.id} {...item} i={idx} />
+							))}
+						</ul>
 					</>
 				)}
 			</div>

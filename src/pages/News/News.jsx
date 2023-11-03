@@ -1,23 +1,23 @@
 import React, { useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { SLIDER_BUTTON_TYPES } from '../../utils/constants';
+import { useNewsItems } from '../../hooks/useNewsitems';
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 
+
 // components
-import Section from '../Section/Section';
-import SectionTitle from '../Title/SectionTitle';
-import Icon from '../Icon/Icon';
-import { SLIDER_BUTTON_TYPES } from '../../utils/constants';
-import Preloader from '../Preloader/Preloader';
-import { useNewsItems } from '../../hooks/useNewsitems';
+import Preloader from '../../components/Preloader/Preloader';
+import Icon from '../../components/Icon/Icon';
+import SectionTitle from '../../components/Title/SectionTitle';
+import Section from '../../components/Section/Section';
 
 const News = () => {
 	const { PREV, NEXT } = SLIDER_BUTTON_TYPES
-
 
 	const sliderRef = useRef()
 

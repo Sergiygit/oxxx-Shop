@@ -1,11 +1,13 @@
 import React from 'react'
 
+
+
 // components
-import TourItems from '../Tour/TourItems'
-import Tracks from '../Tracks/Tracks'
 import MainBanner from './MainBanner'
+import News from '../../pages/News/News'
+import TourItems from '../../pages/Tour/TourItems'
+import Tracks from '../../pages/Tracks/Tracks'
 import ShopBanner from './ShopBanner'
-import News from '../News/News'
 import TourBanner from './TourBanner'
 
 const Home = () => {

@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Preloader from '../../components/Preloader/Preloader'
+import SectionTitle from '../../components/Title/SectionTitle'
 
 import { useTourItems } from '../../hooks/useTourItems'
 import { sortByDate } from '../../utils/common'
+import TourItem from './TourItem'
 
 
 // components
-import Preloader from '../Preloader/Preloader'
-import SectionTitle from '../Title/SectionTitle'
-import TourItem from './TourItem'
+
 
 const TourItems = () => {
 

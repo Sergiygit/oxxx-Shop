@@ -22,27 +22,27 @@ export const MENU = [
 export const SOCIALS = [
 	{
 		icon: "youtube",
-		link: "https://www.youtube.com/channel/UCCzp3DWpSc0s5wXYDghjM9A",
+		link: "https://www.youtube.com",
 	},
 	{
 		icon: "twitter",
-		link: "https://twitter.com/norimyxxxo",
+		link: "https://twitter.com",
 	},
 	{
 		icon: "applemusic",
-		link: "https://music.apple.com/pl/artist/oxxxymiron/301601116",
+		link: "https://music.apple.com",
 	},
 	{
 		icon: "tiktok",
-		link: "https://www.tiktok.com/@oxxxymiron",
+		link: "https://www.tiktok.com",
 	},
 	{
 		icon: "instagram",
-		link: "https://www.instagram.com/norimyxxxo",
+		link: "https://www.instagram.com",
 	},
 	{
 		icon: "spotify",
-		link: "https://open.spotify.com/artist/1gCOYbJNUa1LBVO5rlx0jB",
+		link: "https://open.spotify.com",
 	},
 ];
 

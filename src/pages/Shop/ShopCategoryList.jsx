@@ -7,6 +7,7 @@ const ShopCategoryList = ({ filtered, setFiltered }) => {
 
 	const tabs = [...new Set(items.map(({ category }) => category))];
 	const filterCategory = filtered.map((el) => el.category)
+
 	const toggleTab = useCallback((tab) => {
 		if (tab === null) {
 			setFiltered([]);
@@ -25,6 +26,7 @@ const ShopCategoryList = ({ filtered, setFiltered }) => {
 			>
 				Всі категорії
 			</li>
+
 			{tabs.map((category, idx) => (
 				<li
 					className={`shop-list__category-item ${filterCategory[0] !== category ? '' : 'active'}`}

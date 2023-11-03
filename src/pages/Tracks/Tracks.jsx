@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import { useMusicPlayer } from '../../hooks/useMusicPlayer';
 import { useTrackItems } from '../../hooks/useTrackItem';
 import { getLocalDateString } from '../../utils/common';
-import Icon from '../Icon/Icon';
-import Preloader from '../Preloader/Preloader';
-import Section from '../Section/Section';
-import SectionTitle from '../Title/SectionTitle';
+
+// components
+import Icon from '../../components/Icon/Icon';
+import Preloader from '../../components/Preloader/Preloader';
+import Section from '../../components/Section/Section';
+import SectionTitle from '../../components/Title/SectionTitle';
+
 
 const Tracks = () => {
 	const { items = [], isLoading } = useTrackItems()

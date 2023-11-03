@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import { getLocalDateString } from '../../utils/common'
 
 // components
-import Icon from '../Icon/Icon'
+import Icon from '../../components/Icon/Icon'
 
 const TourItem = ({
 	date,

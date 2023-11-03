@@ -7,13 +7,21 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import AppRoutes from './AppRoutes'
 import Preloader from '../Preloader/Preloader'
+import { useLocation } from 'react-router-dom'
 
-const App = () => (
-	<Suspense fallback={<Preloader />} className='app'>
-		<Header />
-		<AppRoutes />
-		<Footer />
-	</Suspense>
-)
+const App = () => {
+	const location = useLocation()
+	return (
+		<Suspense fallback={<Preloader />} className='app'>
+			<Header />
+			<AppRoutes />
+			
+			{
+				location.key === 'default' ?  '' : <Footer />
+			}
+			
+		</Suspense>
+	)
+}
 
 export default App

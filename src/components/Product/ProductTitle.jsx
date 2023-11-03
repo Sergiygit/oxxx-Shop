@@ -11,17 +11,27 @@ const ProductTitle = ({ product }) => {
 			<p className="product__category">
 				{category}
 			</p>
-			<div className="product__price">
-				<p className='price__sale' style={{ textDecoration: 'line-through', fontFamily: 'Raleway' }}>
-					{price}
-				</p>
-				<p className='price__sale'>
-					/
-				</p>
-				<p className='price__sale'>
-					{!discount ? `${price} $` : <span className="product__price-priceSale">{calculateDiscountedPrice(price, discount)} $</span>}
-				</p>
-			</div>
+			{
+				discount ? (
+					<div className="product__price">
+						<p className='price__sale' style={{ textDecoration: 'line-through', fontFamily: 'Raleway' }}>
+							{price}
+						</p>
+						<p className='price__sale'>
+							/
+						</p>
+						<p className='price__sale'>
+							{!discount ? `${price} $` : <span className="product__price-priceSale">{calculateDiscountedPrice(price, discount)} $</span>}
+						</p>
+					</div>
+				) : (
+					<div className="product__price">
+						<p className='price__sale'>
+							{price} $
+						</p>
+					</div>
+				)
+			}
 		</>
 	)
 }

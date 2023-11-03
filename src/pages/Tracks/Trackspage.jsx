@@ -1,16 +1,16 @@
 import React from 'react'
+import Icon from '../../components/Icon/Icon'
+import Preloader from '../../components/Preloader/Preloader'
+import PageTitle from '../../components/Title/PageTitle'
 import { useMusicPlayer } from '../../hooks/useMusicPlayer'
 import { useTrackItems } from '../../hooks/useTrackItem'
 import { getLocalDateString } from '../../utils/common'
-import Icon from '../Icon/Icon'
-import Preloader from '../Preloader/Preloader'
-import PageTitle from '../Title/PageTitle'
 
 const Trackspage = () => {
 
 	const { items = [], isLoading } = useTrackItems()
 
-	
+
 	const { playing, handleTrackClick, currentTrack } = useMusicPlayer()
 
 	return (

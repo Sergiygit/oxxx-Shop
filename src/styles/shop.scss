@@ -34,7 +34,7 @@ $easing: cubic-bezier(0.4, 0, 0.2, 1);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		@media only screen and (max-width: 776px) {
-			grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		}
 		&__item {
 			position: relative;
@@ -138,6 +138,18 @@ $easing: cubic-bezier(0.4, 0, 0.2, 1);
 			.active {
 				background: var(--action);
 				color: var(--light);
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.shop {
+		&-list {
+			&__category-item {
+				flex: 1;
+				min-width: 190px;
+				padding: 0.5rem 2.5rem;
 			}
 		}
 	}

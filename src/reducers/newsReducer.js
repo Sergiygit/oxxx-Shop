@@ -13,6 +13,7 @@ const initialState = {
 
 // feth request query
 
+
 // items
 export const getNewsItems = createAsyncThunk(
 	"newsItems/getNewsItems",
@@ -28,6 +29,8 @@ export const getNewsItems = createAsyncThunk(
 		}
 	}
 );
+
+
 
 // item
 export const getNewsItem = createAsyncThunk(
@@ -50,6 +53,7 @@ const newsItemsSlice = createSlice({
 
 	extraReducers: (builder) => {
 		builder
+			// items
 			.addCase(getNewsItems.pending, (state) => {
 				state.isLoading = true;
 			})
@@ -60,6 +64,8 @@ const newsItemsSlice = createSlice({
 			.addCase(getNewsItems.rejected, (state) => {
 				state.isLoading = false;
 			})
+
+			// item
 			.addCase(getNewsItem.pending, (state) => {
 				state.isLoading = true;
 			})

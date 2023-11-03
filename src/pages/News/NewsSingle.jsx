@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import Preloader from '../../components/Preloader/Preloader'
 
 import { getNewsItem } from '../../reducers/newsReducer'
 import { getLocalDateString, jsonToText } from '../../utils/common'
-import Preloader from '../Preloader/Preloader'
 
 const NewsSingle = () => {
 	const dispatch = useDispatch()
