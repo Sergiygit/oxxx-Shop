@@ -37,6 +37,7 @@
 
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Cart from '../../pages/Cart/Cart'
 import NewsPage from '../../pages/News/NewsPage'
 import NewsSingle from '../../pages/News/NewsSingle'
 import NotFound from '../../pages/NotFound/NotFound'
@@ -57,6 +58,7 @@ const AppRoutes = () => {
 				<Route path='/shop' element={<ShopPage />} />
 				<Route path='/shop/:id' element={<Product />} />
 				<Route path='/news' element={<NewsPage />} />
+				<Route path='/cart' element={<Cart />} />
 				<Route path='/news/:id' element={<NewsSingle />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>

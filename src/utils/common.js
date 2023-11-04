@@ -5,6 +5,7 @@ import AssetText from "../components/Assets/AssetsText";
 
 import { MAIN_URL } from "./constants"
 
+
 // feth request query
 export const request = async (query) => {
 	try {
@@ -39,7 +40,6 @@ export const getLocalDateString = (date, { month = 'numeric', day = 'numeric', y
 
 
 // для виводу текстів і зображень з json 
-
 export const renderNode = ({ nodeType, data, value, content }, i) => {
 	const key = `${nodeType}${i}`;
 
@@ -75,7 +75,7 @@ export const getAsset = async (assetId) => {
 		const url = `https://cdn.contentful.com/spaces/${process.env.REACT_APP_SPACE_ID}/assets/${assetId}?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`;
 
 		const result = await fetch(url);
-		
+
 		const data = await result.json();
 
 		const link = data?.fields?.file?.url;
@@ -86,6 +86,8 @@ export const getAsset = async (assetId) => {
 	}
 };
 
- export const calculateDiscountedPrice = (price, discount) => {
+export const calculateDiscountedPrice = (price, discount) => {
 	return discount ? price - (price * (discount / 100)) : price;
 };
+
+

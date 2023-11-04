@@ -1,5 +1,17 @@
 .header {
 	z-index: 2;
+
+	&__block {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1.875rem;
+		align-items: center;
+		&-cart {
+			gap: 2px;
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 header {
 	padding-top: 1.25rem;

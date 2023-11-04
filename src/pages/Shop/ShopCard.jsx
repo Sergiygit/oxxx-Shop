@@ -9,6 +9,7 @@ import { calculateDiscountedPrice } from '../../utils/common';
 const ShopCard = memo(({ el }) => {
 	const { sys: { id }, title, cover: { url }, description, price, discount } = el;
 
+
 	return (
 		<li className="shop-list__item" key={id}>
 			{!discount ? <span className="shop-list__item-price">{price} $</span> : <span className="shop-list__item-priceSale">{calculateDiscountedPrice(price, discount)} $</span>}
@@ -18,7 +19,7 @@ const ShopCard = memo(({ el }) => {
 			<h1 className="shop-list__item-title">{title}</h1>
 			<hr />
 			<p className="shop-list__item-description">{description} </p>
-			<Link to='/' className="shop-list__item-btn btn">Buy Now</Link>
+			<Link to={`/shop/${id}`} className="shop-list__item-btn btn">Buy Now</Link>
 		</li>
 	)
 })

@@ -33,7 +33,6 @@ export const getShopItem = createAsyncThunk(
 	async (id, thunkAPI) => {
 		try {
 			const data = await request(shopItemQuery(id));
-			console.log(data.shopItem)
 			return data.shopItem;
 		} catch (err) {
 			return thunkAPI.rejectWithValue(err);
