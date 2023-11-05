@@ -19,19 +19,21 @@ const FooterForm = () => {
 		<form className="footer-form" onSubmit={handleSubmit}>
 			<p>підпішіться на нас</p>
 
-			<div className="footer-form__email">
-				<input
-					onChange={handleChange}
-					type="email"
-					name="email"
-					value={state}
-					placeholder="Email"
-				/>
+			<div className='footer-form__block'>
+				<div className="footer-form__email">
+					<input
+						onChange={handleChange}
+						type="email"
+						name="email"
+						value={state}
+						placeholder="Email"
+					/>
+				</div>
+				<button className="footer-form__button" type="submit">
+					<span>Подписаться</span>
+					<Icon name="arrow-right" />
+				</button>
 			</div>
-			<button className="footer-form__button" type="submit">
-				<span>Подписаться</span>
-				<Icon name="arrow-right" />
-			</button>
 		</form>
 	)
 }

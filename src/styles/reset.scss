@@ -76,13 +76,13 @@ li {
 
 	@media only screen and (max-width: 85.375rem) {
 		width: calc(100vw - 1.875rem);
-		padding: 0 .9375rem;
+		padding: 0 0.9375rem;
 	}
 }
 
 .icon {
-	width: .75rem;
-	height: .75rem;
+	width: 0.75rem;
+	height: 0.75rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -108,7 +108,7 @@ h2 {
 
 .button-more {
 	color: var(--light);
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 900;
 	text-decoration-line: underline;
 	text-transform: uppercase;
@@ -124,7 +124,7 @@ h2 {
 	}
 
 	@media only screen and (max-width: 85.375rem) {
-		font-size: .75rem;
+		font-size: 0.75rem;
 		margin-top: 1.5625rem;
 	}
 }

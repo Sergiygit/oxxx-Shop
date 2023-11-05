@@ -33,7 +33,12 @@ const Header = () => {
 		<section className='header'>
 			<div className="container">
 				<header>
-					<Logo />
+					<div style={{
+						display: 'flex', gap: ' 10px', alignItems: 'center'
+					}}>
+						<Hamburger />
+						<Logo />
+					</div>
 					<nav className='menu'>
 						{
 							MENU.map(({ link, name }, i) =>
@@ -49,18 +54,15 @@ const Header = () => {
 							)
 						}
 					</nav>
-					<div className='header__block'>
-						<Socials />
-						<Hamburger />
-						<Link to='/cart' className='header__block-cart'>
-							<BsCart2 size={18} />
-							<small>{getTotalQuantity() || 0}</small>
-						</Link>
-					</div>
+					<Socials />
+					<Link to='/cart' className='header__block-cart'>
+						<BsCart2 size={18} />
+						<small>{getTotalQuantity() || 0}</small>
+					</Link>
 
 				</header>
-			</div>
-		</section>
+			</div >
+		</section >
 	)
 }
 

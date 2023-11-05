@@ -130,7 +130,7 @@
 	}
 
 	@media only screen and (max-width: 85.375rem) {
-		grid-template-columns: 12.5rem 1fr;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	&-item {
@@ -149,7 +149,7 @@
 					". title";
 
 				@media only screen and (max-width: 85.375rem) {
-					grid-template-columns: 1fr 12.5rem;
+					grid-template-columns: 1fr 1fr;
 				}
 
 				@media only screen and (max-width: 46.875rem) {
@@ -203,7 +203,7 @@
 		z-index: 2;
 
 		@media only screen and (max-width: 85.375rem) {
-			font-size: 1.125rem;
+			font-size: 1rem;
 		}
 
 		@media only screen and (max-width: 46.875rem) {

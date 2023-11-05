@@ -15,12 +15,16 @@ const Footer = () => {
 				<div className="footer__wrapper">
 
 					<FooterForm />
-					<div className="footer-info">
-						<Logo />
-						<p>name, {year}</p>
-					</div>
+					<div className="footer__wrapper-block">
+						<div className="footer-info">
+							<div className="footer-info__logo">
+								<Logo />
+							</div>
+							<p>name, {year}</p>
+						</div>
 
-					<Socials width={24} height={24} />
+						<Socials width={22} height={22} />
+					</div>
 				</div>
 			</div>
 		</footer>

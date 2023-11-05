@@ -28,6 +28,7 @@ const Product = () => {
 				) : (
 					<div className="product__item">
 						<div className="product__text">
+
 							<ProductTitle product={item} />
 						</div>
 						<div className="product__row">

@@ -16,16 +16,22 @@
 header {
 	padding-top: 1.25rem;
 	display: grid;
-	grid-template-columns: 1fr max-content 1fr;
+	grid-template-columns: 1fr max-content 1fr 0fr;
 	justify-content: space-between;
 	align-items: center;
 
-	@media only screen and (max-width: 750px) {
+	@media only screen and (max-width: 780px) {
 		padding-top: 10px;
+		grid-template-columns: 0fr 0fr 0fr;
+	}
+
+	@media only screen and (max-width: 380px) {
+		padding-top: 10px;
+		grid-template-columns: 0fr 0fr;
 	}
 
 	.logo {
-		@media only screen and (max-width: 750px) {
+		@media only screen and (max-width: 780px) {
 			width: 32px;
 		}
 	}
@@ -34,7 +40,6 @@ header {
 .socials {
 	@include flex;
 	column-gap: 0.625rem;
-	justify-content: flex-end;
 	svg {
 		fill: var(--light);
 		width: 1rem;
@@ -47,6 +52,9 @@ header {
 				fill: var(--action);
 			}
 		}
+	}
+	@media only screen and (max-width: 380px) {
+		display: none;
 	}
 }
 
@@ -67,7 +75,7 @@ header {
 			cursor: pointer;
 		}
 
-		@media only screen and (max-width: 750px) {
+		@media only screen and (max-width: 780px) {
 			display: block;
 		}
 
@@ -140,7 +148,7 @@ header {
 			}
 		}
 	}
-	@media only screen and (max-width: 750px) {
+	@media only screen and (max-width: 780px) {
 		display: none;
 	}
 }

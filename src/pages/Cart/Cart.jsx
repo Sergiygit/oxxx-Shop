@@ -19,7 +19,7 @@ const Cart = () => {
 						<div>
 							{cart?.map((item) => (
 								<CartItem
-									key={item.id}
+									key={`${item.id}-${item.color}-${item.size}`}
 									item={item}
 								/>
 							))}

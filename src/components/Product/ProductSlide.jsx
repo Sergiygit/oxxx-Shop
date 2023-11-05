@@ -4,13 +4,17 @@ import { FreeMode, Thumbs, Pagination } from "swiper/modules";
 import "swiper/css";
 import 'swiper/css/free-mode';
 import "swiper/css/thumbs";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const ProductSlide = ({ product }) => {
 
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 	return (
-		<div className="product__slide">
+		<ScrollAnimation
+			animateIn="fadeInLeft"
+			animateOut="fadeOutLeft"
+			offset={260} className="product__slide">
 			<Swiper
 				spaceBetween={10}
 				thumbs={{ swiper: thumbsSwiper }}
@@ -86,7 +90,7 @@ const ProductSlide = ({ product }) => {
 					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
 				</SwiperSlide>
 			</Swiper>
-		</div>
+		</ScrollAnimation>
 	);
 };
 
