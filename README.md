@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Demo website of the oxxx Shop.
+This repository contains the code for a React application developed to create a user interface for a store. The store encompasses numerous features that provide convenience and functionality for users.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Live Demo](#live-demo)
+- [Screenshots](#Screenshots)
+- [Description](#description)
+- [The main features of the store include](#main-features)
+- [Backend](#backend)
+- [Frontend](#frontend)
+- [UI Requirements](#ui-requirements)
+- [Instructions](#instructions)
+- [Contact](#contact)
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+Check out the live project on Netlify: https://main--idyllic-khapse-c595d3.netlify.app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🌱 Please note that there might be issues with loading products from server on the live demo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+ The application is designed with user-friendly features and a responsive layout.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## main features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+головна сторінка складається з банерів про Концерти , RELEASES, NEWS, SHOP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Backend
 
-### `npm run eject`
+Json-server, Json-server-auth
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Frontend
+Library:
+- antd
+- axios
+- google-map-react
+- i18next
+- json-server
+- json-server-auth
+- react-admin
+- ra-data-json-server
+- react-lazy-load-image-component
+- swiper
+- react-hook-form
+- react-input-mask
+  
+## UI Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application follows an eye-friendly design and is responsive.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the project on your local machine:
 
-## Learn More
+1. Clone this repository: `git clone [repo-link]`
+2. Navigate to the project directory: `cd [project-folder]`
+3. Install dependencies: `npm install`
+4. Run the Vite development server: `npm run start`
+5. Start the front-end and back-end development servers with "npm run dev."
+6. Access the application in your browser at `http://localhost:3000` or link provided by vite
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any inquiries or feedback, feel free to contact:
 
-### Code Splitting
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-2CA5E0?style=for-the-badge&logo=linkedIn&logoColor=white)](https://www.linkedin.com/in/nazar-lyubchynskyi-37a89026b/) 
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/VBShadow) 
+[![portfolio](https://img.shields.io/badge/Portfolio-2CA5E0?style=for-the-badge&logoColor=white)](https://www.weblancer.net/users/Lyubch/#portfolio) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy exploring the React application and its features!
