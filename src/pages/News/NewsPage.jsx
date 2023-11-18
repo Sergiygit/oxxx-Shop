@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../components/Icon/Icon';
 import Preloader from '../../components/Preloader/Preloader';
@@ -6,9 +6,7 @@ import PageTitle from '../../components/Title/PageTitle';
 import { useNewsItems } from '../../hooks/useNewsitems';
 import { getLocalDateString } from '../../utils/common';
 
-
 // components
-
 
 const NewsPage = () => {
 	const { items, isLoading } = useNewsItems();
@@ -16,7 +14,7 @@ const NewsPage = () => {
 	return (
 		<section className="news-page page">
 			<div className="container">
-				<PageTitle text="Все новости" />
+				<PageTitle text="All News" />
 
 				{isLoading ? (
 					<Preloader />
@@ -35,7 +33,7 @@ const NewsPage = () => {
 										</p>
 										<h2 className="news-list__item-title">{title}</h2>
 										<Link to={`/news/${id}`} className="news-list__item-button">
-											<span>Читать</span>
+											<span>Read</span>
 											<Icon name="arrow-right" />
 										</Link>
 									</div>
@@ -46,7 +44,7 @@ const NewsPage = () => {
 				)}
 			</div>
 		</section>
-	)
+	);
 }
 
-export default NewsPage
+export default NewsPage;

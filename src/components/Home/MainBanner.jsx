@@ -12,7 +12,7 @@ const MainBanner = () => {
 	return (
 		<Section>
 			<div className="container">
-				<h1 style={{ fontSize: 0, lineHeight: 0 }}>Oxxxymiron</h1>
+				<h1 style={{ fontSize: 0, lineHeight: 0 }}>Oxxx</h1>
 				<ScrollAnimation
 					animateIn="fadeInLeft"
 					animateOut="fadeOutLeft" className="banner" >

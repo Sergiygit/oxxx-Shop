@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Preloader from '../../components/Preloader/Preloader'
-import SectionTitle from '../../components/Title/SectionTitle'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Preloader from '../../components/Preloader/Preloader';
+import SectionTitle from '../../components/Title/SectionTitle';
 
-import { useTourItems } from '../../hooks/useTourItems'
-import { sortByDate } from '../../utils/common'
-import TourItem from './TourItem'
-
+import { useTourItems } from '../../hooks/useTourItems';
+import { sortByDate } from '../../utils/common';
+import TourItem from './TourItem';
 
 // components
-
 
 const TourItems = () => {
 
@@ -25,7 +23,7 @@ const TourItems = () => {
 	return (
 		<section className="tour">
 			<div className='container'>
-				<SectionTitle text='Концерти' />
+				<SectionTitle text='Concerts' />
 				{isLoading ? <Preloader /> : (
 					<ul className='tour-list'>
 						{
@@ -36,10 +34,10 @@ const TourItems = () => {
 					</ul>
 				)}
 				<Link to='/tour' className='button-more'>
-					Всі концерти
+					All Concerts
 				</Link>
 			</div>
 		</section>
-	)
+	);
 }
-export default TourItems
+export default TourItems;

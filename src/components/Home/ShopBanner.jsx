@@ -1,10 +1,10 @@
-import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll'
-import { Link } from 'react-router-dom'
-import Section from '../Section/Section'
+import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
+import Section from '../Section/Section';
 
 // images
-import logo from '../../images/oxxxyshop.webp'
+import logo from '../../images/oxxxyshop.webp';
 
 const ShopBanner = () => {
 	return (
@@ -19,7 +19,7 @@ const ShopBanner = () => {
 							offset={260}
 						>
 							<p className="shop-banner__subtitle">
-								ОБНОВЛЕННЫЙ МЕРЧ
+								Updated Merchandise
 							</p>
 							<p className="shop-banner__title">SHOP 2.0</p>
 						</ScrollAnimation>
@@ -34,7 +34,7 @@ const ShopBanner = () => {
 				</div>
 			</div>
 		</Section>
-	)
+	);
 }
 
-export default ShopBanner
+export default ShopBanner;

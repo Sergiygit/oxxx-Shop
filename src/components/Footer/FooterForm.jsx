@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Icon from '../Icon/Icon';
 
 const FooterForm = () => {
@@ -11,13 +11,13 @@ const FooterForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		alert('Успішно')
+		alert('Successfully');
 		setState("");
 	};
 
 	return (
 		<form className="footer-form" onSubmit={handleSubmit}>
-			<p>підпішіться на нас</p>
+			<p>Subscribe to us</p>
 
 			<div className='footer-form__block'>
 				<div className="footer-form__email">
@@ -30,7 +30,7 @@ const FooterForm = () => {
 					/>
 				</div>
 				<button className="footer-form__button" type="submit">
-					<span>Подписаться</span>
+					<span>Subscribe</span>
 					<Icon name="arrow-right" />
 				</button>
 			</div>
@@ -38,4 +38,4 @@ const FooterForm = () => {
 	)
 }
 
-export default FooterForm
+export default FooterForm;

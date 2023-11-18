@@ -46,6 +46,7 @@ import TourPage from '../../pages/Tour/TourPage'
 import Trackspage from '../../pages/Tracks/Trackspage'
 import Home from '../Home/Home'
 import Product from '../Product/Product'
+import Tic from '../Tic/Tic'
 
 const AppRoutes = () => {
 
@@ -61,6 +62,10 @@ const AppRoutes = () => {
 				<Route path='/cart' element={<Cart />} />
 				<Route path='/news/:id' element={<NewsSingle />} />
 				<Route path='*' element={<NotFound />} />
+
+
+
+				<Route path='/tic' element={<Tic />} />
 			</Routes>
 
 

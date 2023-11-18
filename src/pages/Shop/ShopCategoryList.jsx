@@ -1,4 +1,3 @@
-
 import React, { useCallback } from 'react';
 import { useShopItems } from '../../hooks/useShopitems';
 
@@ -24,7 +23,7 @@ const ShopCategoryList = ({ filtered, setFiltered }) => {
 				className={`shop-list__category-item ${filterCategory.length === 0 ? 'active' : ''}`}
 				onClick={() => toggleTab(null)}
 			>
-				Всі категорії
+				All Categories
 			</li>
 
 			{tabs.map((category, idx) => (
@@ -41,4 +40,3 @@ const ShopCategoryList = ({ filtered, setFiltered }) => {
 };
 
 export default ShopCategoryList;
-

@@ -2,15 +2,15 @@ export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${proc
 
 export const MENU = [
 	{
-		name: "Концерты",
+		name: "Concerts",
 		link: "tour",
 	},
 	{
-		name: "Творчество",
+		name: "Creativity",
 		link: "tracks",
 	},
 	{
-		name: "Новости",
+		name: "News",
 		link: "news",
 	},
 	{

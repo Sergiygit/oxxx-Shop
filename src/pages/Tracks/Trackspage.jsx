@@ -16,7 +16,7 @@ const Trackspage = () => {
 	return (
 		<section className='tracks-page page'>
 			<div className="container">
-				<PageTitle text='Всі релізи' />
+				<PageTitle text='All releases' />
 
 				{isLoading ?
 					<Preloader /> : (
@@ -47,7 +47,7 @@ const Trackspage = () => {
 												</div>
 
 												<button className='tracks-list__item-button' onClick={() => handleTrackClick(track)}>
-													<span>Слухати</span>
+													<span>Listen</span>
 													<Icon name={iconName} />
 												</button>
 											</li>

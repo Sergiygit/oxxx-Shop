@@ -20,7 +20,7 @@ const Tracks = () => {
 	return (
 		<Section className="tracks-section">
 			<div className="container">
-				<SectionTitle text="Релизы" />
+				<SectionTitle text="Releases" />
 
 				{isLoading ? (
 					<Preloader />
@@ -65,7 +65,7 @@ const Tracks = () => {
 				)}
 
 				<Link to="/tracks" className="button-more">
-					Всі релізи
+					All releases
 				</Link>
 			</div>
 		</Section>

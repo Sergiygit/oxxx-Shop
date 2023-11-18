@@ -30,7 +30,7 @@ const TourPage = () => {
 	return (
 		<section className='tour-page page'>
 			<div className="container">
-				<PageTitle text='Концерти' />
+				<PageTitle text='Concerts' />
 
 				{isLoading ? <Preloader /> : (
 					<>

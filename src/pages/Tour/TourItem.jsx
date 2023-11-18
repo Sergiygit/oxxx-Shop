@@ -1,9 +1,9 @@
-import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll'
-import { getLocalDateString } from '../../utils/common'
+import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { getLocalDateString } from '../../utils/common';
 
 // components
-import Icon from '../../components/Icon/Icon'
+import Icon from '../../components/Icon/Icon';
 
 const TourItem = ({
 	date,
@@ -33,11 +33,11 @@ const TourItem = ({
 					<a className='tour-item__button' href={ticketLink || videoLink} target='__blank'>
 						{ticketLink ? (
 							<>
-								<span>Білети</span>
+								<span>Tickets</span>
 								<Icon name='arrow-right' />
 							</>
 						) : (
-							<span>Відео</span>
+							<span>Video</span>
 						)}
 					</a>
 				) : (
@@ -47,7 +47,7 @@ const TourItem = ({
 				)}
 			</ScrollAnimation>
 		</li>
-	)
+	);
 }
 
-export default TourItem
+export default TourItem;

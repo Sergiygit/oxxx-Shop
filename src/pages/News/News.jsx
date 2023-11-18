@@ -36,7 +36,7 @@ const News = () => {
 	return (
 		<Section className="news-section" >
 			<div className="container">
-				<SectionTitle text="Новости" />
+				<SectionTitle text="News" />
 				{isLoading ? (
 					<Preloader />
 				) : (
@@ -48,19 +48,25 @@ const News = () => {
 						navigation
 						modules={[Navigation]}
 						breakpoints={{
-							1366: {
+							992: {
 								slidesPerView: 4,
 							},
-							720: {
+							762: {
 								slidesPerView: 3,
 							},
-							360: {
+							
+							500: {
 								slidesPerView: 2,
 							},
+							320: {
+								slidesPerView: 1,
+							},
+							
 						}}
 					>
 						{items.map(({ title, sys: { id }, cover: { url } }, i) => (
-							<SwiperSlide key={id}>
+							<SwiperSlide key={id}
+							>
 								<ScrollAnimation
 									animateIn="fadeInLeft"
 									animateOut="fadeOutLeft"

@@ -132,13 +132,14 @@
 	&-item {
 		&__img {
 			width: 100%;
-			height: 188px;
+			height: 240px;
 			overflow: hidden;
 
 			img {
 				max-width: unset;
 				object-fit: cover;
 				height: 100%;
+				width: 100%;
 			}
 		}
 

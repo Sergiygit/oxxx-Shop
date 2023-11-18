@@ -46,7 +46,9 @@ button {
 	font-size: 1rem;
 	padding: 0;
 }
-
+button{
+	cursor: pointer;
+}
 a {
 	color: var(--light);
 	text-decoration: none;

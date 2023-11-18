@@ -32,8 +32,8 @@
 					"button";
 			}
 
-			@media only screen and (max-width: 46.875rem) {
-				gap: .625rem;
+			@media only screen and (max-width: 50.875rem) {
+				gap: 0.625rem;
 			}
 
 			&-image {
@@ -57,11 +57,11 @@
 
 			&-date {
 				color: var(--grey);
-				font-size: .875rem;
+				font-size: 0.875rem;
 				text-transform: uppercase;
 
-				@media only screen and (max-width: 46.875rem) {
-					font-size: .75rem;
+				@media only screen and (max-width: 50.875rem) {
+					font-size: 0.75rem;
 				}
 			}
 
@@ -73,20 +73,20 @@
 				margin: 1rem 0;
 				line-height: 115%;
 
-				@media only screen and (max-width: 46.875rem) {
-					margin: .625rem 0;
+				@media only screen and (max-width: 50.875rem) {
+					margin: 0.625rem 0;
 					font-size: 1.125rem;
 				}
 			}
 
 			&-description {
 				color: var(--light);
-				font-size: .875rem;
+				font-size: 0.875rem;
 				font-weight: 500;
 				line-height: 1.5rem;
 
-				@media only screen and (max-width: 46.875rem) {
-					font-size: .75rem;
+				@media only screen and (max-width: 50.875rem) {
+					font-size: 0.75rem;
 					line-height: 1.125rem;
 				}
 			}
@@ -95,9 +95,9 @@
 				@include button;
 				grid-area: button;
 				width: 13.3125rem;
-				padding: .75rem;
+				padding: 0.75rem;
 
-				@media only screen and (max-width: 46.875rem) {
+				@media only screen and (max-width: 50.875rem) {
 					width: 100%;
 				}
 			}
@@ -121,24 +121,32 @@
 		"title .";
 	max-width: 100%;
 
-	@media only screen and (max-width: 46.875rem) {
-		gap: .625rem;
+	@media only screen and (max-width: 50.875rem) {
+		gap: 0.625rem;
 		grid-template-rows: max-content 1fr;
 		grid-template-areas:
 			"image date"
 			"image title";
 	}
 
-	@media only screen and (max-width: 85.375rem) {
-		grid-template-columns: 1fr 1fr;
+	@media only screen and (max-width: 37.5rem) {
+		// grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
 	}
 
 	&-item {
-		@media only screen and (max-width: 46.875rem) {
+		@media only screen and (max-width: 50.875rem) {
 			&:not(:last-child) {
 				margin-bottom: 1rem;
 			}
 		}
+		// @media only screen and (max-width: 37.5rem) {
+		// 	&:not(:last-child) {
+		// 		margin-bottom: 3rem;
+		// 	}
+		// }
 
 		&:nth-child(2n) {
 			.track {
@@ -148,11 +156,14 @@
 					"date image"
 					". title";
 
-				@media only screen and (max-width: 85.375rem) {
-					grid-template-columns: 1fr 1fr;
+				@media only screen and (max-width: 37.5rem) {
+					// grid-template-columns: 1fr 1fr;
+					display: flex;
+					flex-direction: column;
+					gap: 1.25rem;
 				}
 
-				@media only screen and (max-width: 46.875rem) {
+				@media only screen and (max-width: 50.875rem) {
 					grid-template-areas:
 						"date image"
 						"title image";
@@ -162,14 +173,14 @@
 	}
 
 	&-image {
-	cursor: pointer;
+		cursor: pointer;
 		grid-area: image;
 		width: 100%;
 		height: 12.75rem;
 		position: relative;
 
-		@media only screen and (max-width: 85.375rem) {
-			height: 8.5rem;
+		@media only screen and (max-width: 37.5rem) {
+			height: 100%;
 		}
 
 		img {
@@ -188,7 +199,7 @@
 
 	&-date {
 		color: var(--grey);
-		font-size: .875rem;
+		font-size: 0.875rem;
 		grid-area: date;
 	}
 
@@ -206,7 +217,7 @@
 			font-size: 1rem;
 		}
 
-		@media only screen and (max-width: 46.875rem) {
+		@media only screen and (max-width: 50.875rem) {
 			position: relative;
 			top: 0;
 		}
