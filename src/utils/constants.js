@@ -5,10 +5,10 @@ export const MENU = [
 		name: "Concerts",
 		link: "tour",
 	},
-	{
-		name: "Creativity",
-		link: "tracks",
-	},
+	// {
+	// 	name: "Creativity",
+	// 	link: "tracks",
+	// },
 	{
 		name: "News",
 		link: "news",
@@ -20,30 +20,30 @@ export const MENU = [
 ];
 
 export const SOCIALS = [
-	{
-		icon: "youtube",
-		link: "https://www.youtube.com",
-	},
-	{
-		icon: "twitter",
-		link: "https://twitter.com",
-	},
-	{
-		icon: "applemusic",
-		link: "https://music.apple.com",
-	},
-	{
-		icon: "tiktok",
-		link: "https://www.tiktok.com",
-	},
-	{
-		icon: "instagram",
-		link: "https://www.instagram.com",
-	},
-	{
-		icon: "spotify",
-		link: "https://open.spotify.com",
-	},
+	// {
+	// 	icon: "youtube",
+	// 	link: "https://www.youtube.com",
+	// },
+	// {
+	// 	icon: "twitter",
+	// 	link: "https://twitter.com",
+	// },
+	// {
+	// 	icon: "applemusic",
+	// 	link: "https://music.apple.com",
+	// },
+	// {
+	// 	icon: "tiktok",
+	// 	link: "https://www.tiktok.com",
+	// },
+	// {
+	// 	icon: "instagram",
+	// 	link: "https://www.instagram.com",
+	// },
+	// {
+	// 	icon: "spotify",
+	// 	link: "https://open.spotify.com",
+	// },
 ];
 
 export const SLIDER_BUTTON_TYPES = {

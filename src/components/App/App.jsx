@@ -15,7 +15,6 @@ const App = () => {
 		<Suspense fallback={<Preloader />} className='app'>
 			<Header />
 			<AppRoutes />
-			
 			{
 				location.key === 'default' ?  '' : <Footer />
 			}

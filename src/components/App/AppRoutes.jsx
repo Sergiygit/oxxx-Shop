@@ -53,9 +53,10 @@ const AppRoutes = () => {
 	return (
 		<>
 			<Routes>
+				
 				<Route index element={<Home />} />
 				<Route path='/tour' element={<TourPage />} />
-				<Route path='/tracks' element={<Trackspage />} />
+				{/* <Route path='/tracks' element={<Trackspage />} /> */}
 				<Route path='/shop' element={<ShopPage />} />
 				<Route path='/shop/:id' element={<Product />} />
 				<Route path='/news' element={<NewsPage />} />
