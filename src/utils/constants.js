@@ -8,7 +8,7 @@ export const MENU = [
 	// {
 	// 	name: "Creativity",
 	// 	link: "tracks",
-	// },
+	// }, 
 	{
 		name: "News",
 		link: "news",
