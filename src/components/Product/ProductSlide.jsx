@@ -1,58 +1,53 @@
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Thumbs, Pagination } from "swiper/modules";
-import "swiper/css";
-import 'swiper/css/free-mode';
-import "swiper/css/thumbs";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FreeMode, Thumbs, Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/thumbs';
 
 const ProductSlide = ({ product }) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const slides = product.imageCollection?.items || [];
 
-	const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // Виносимо один раз слайди
+  const renderSlides = (className) =>
+    slides.map((img, id) => (
+      <SwiperSlide key={id}>
+        <img
+          className={className}
+          src={img.url}
+          alt={img.title || `Фото ${id + 1}`}
+        />
+      </SwiperSlide>
+    ));
 
-	return (
-	
-		<ScrollAnimation
-			animateIn="fadeInLeft"
-			animateOut="fadeOutLeft"
-			offset={260} className="product__slide">
-			<Swiper
-				spaceBetween={10}
-				thumbs={{ swiper: thumbsSwiper }}
-				modules={[FreeMode, Thumbs]}
-				className="mySwiper2"
-			>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-			</Swiper>
-			<Swiper
-				onSwiper={setThumbsSwiper}
-				spaceBetween={10}
-				slidesPerView={3.5}
-				freeMode={true}
-				watchSlidesProgress={true}
-				modules={[FreeMode, Thumbs]}
-				className="mySwiper"
-			>
-				<SwiperSlide >
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-			</Swiper>
+  return (
+    <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOutLeft" offset={260} className="product__slide">
+      <Swiper
+        spaceBetween={10}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Thumbs]}
+        className="mySwiper2"
+      >
+        {renderSlides('product__slide-img')}
+      </Swiper>
 
-			<Swiper
+    {slides.length > 1 && (
+		  <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={10}
+        slidesPerView={slides.length < 4 ? slides.length : 4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Thumbs]}
+        className="mySwiper"
+      >
+        {renderSlides('product__slide-img')}
+      </Swiper>
+	)}
+
+				<Swiper
 				slidesPerView={1.5}
 				spaceBetween={10}
 				centeredSlides={true}
@@ -81,18 +76,10 @@ const ProductSlide = ({ product }) => {
 
 				}}
 			>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img className='product__slide-img' src={`${product.cover.url}`} alt="" />
-				</SwiperSlide>
+				{renderSlides('product__slide-img')}
 			</Swiper>
-		</ScrollAnimation>
-	);
+    </ScrollAnimation>
+  );
 };
 
 export default ProductSlide;

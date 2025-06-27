@@ -112,7 +112,12 @@ export const shopItemQuery = (id) => `
 		}
 		discount
 		category
-    
+    imageCollection {
+      items {
+        url
+        title
+      }
+    }
   }
 }
 `;
