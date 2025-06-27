@@ -11,6 +11,7 @@ const ProductSlide = ({ product }) => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 	return (
+	
 		<ScrollAnimation
 			animateIn="fadeInLeft"
 			animateOut="fadeOutLeft"

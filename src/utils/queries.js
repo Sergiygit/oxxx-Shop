@@ -76,6 +76,7 @@ export const newsItemQuery = (id) => `
 export const shopItemCollectionQuery = `
 {
 	shopItemCollection {
+  
 		items {
 		  sys {
 			 id
@@ -85,9 +86,14 @@ export const shopItemCollectionQuery = `
 		  cover { 
 			url
 			}
-			description
 			discount
 			category
+    imageCollection {
+      items {
+        url
+        title
+      }
+    }
 		}
 	 }
 }
@@ -104,9 +110,9 @@ export const shopItemQuery = (id) => `
 	  cover { 
 		url
 		}
-		description
 		discount
 		category
+    
   }
 }
 `;
