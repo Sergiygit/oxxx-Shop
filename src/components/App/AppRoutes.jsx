@@ -1,41 +1,44 @@
-// import React from 'react'
-// import { Route, Routes, useLocation } from 'react-router-dom'
+
+// import { Route, Routes } from 'react-router-dom'
+// import Cart from '../../pages/Cart/Cart'
 // import NewsPage from '../../pages/News/NewsPage'
 // import NewsSingle from '../../pages/News/NewsSingle'
 // import NotFound from '../../pages/NotFound/NotFound'
 // import ShopPage from '../../pages/Shop/ShopPage'
 // import TourPage from '../../pages/Tour/TourPage'
-// import Trackspage from '../../pages/Tracks/Trackspage'
 // import Home from '../Home/Home'
 // import Product from '../Product/Product'
+// import Tic from '../Tic/Tic'
 
 // const AppRoutes = () => {
-// 	const location = useLocation()
-// 	console.log(location)
+
 // 	return (
 // 		<>
 // 			<Routes>
+				
 // 				<Route index element={<Home />} />
 // 				<Route path='/tour' element={<TourPage />} />
-// 				<Route path='/tracks' element={<Trackspage />} />
 // 				<Route path='/shop' element={<ShopPage />} />
 // 				<Route path='/shop/:id' element={<Product />} />
 // 				<Route path='/news' element={<NewsPage />} />
+// 				<Route path='/cart' element={<Cart />} />
 // 				<Route path='/news/:id' element={<NewsSingle />} />
 // 				<Route path='*' element={<NotFound />} />
+
+
+
+// 				<Route path='/tic' element={<Tic />} />
 // 			</Routes>
 
-// 			{
-// 				location.pathname = '/tour' || '/tracks' || '/shop'
 
-// 			}
 // 		</>
 // 	)
 // }
 
 // export default AppRoutes
 
-import React from 'react'
+
+
 import { Route, Routes } from 'react-router-dom'
 import Cart from '../../pages/Cart/Cart'
 import NewsPage from '../../pages/News/NewsPage'
@@ -56,7 +59,10 @@ const AppRoutes = () => {
 				<Route index element={<Home />} />
 				<Route path='/tour' element={<TourPage />} />
 				<Route path='/shop' element={<ShopPage />} />
-				<Route path='/shop/:id' element={<Product />} />
+				
+                <Route path='/shop/category/:category' element={<ShopPage />} />
+               <Route path='/shop/product/:id' element={<Product />} />
+
 				<Route path='/news' element={<NewsPage />} />
 				<Route path='/cart' element={<Cart />} />
 				<Route path='/news/:id' element={<NewsSingle />} />
