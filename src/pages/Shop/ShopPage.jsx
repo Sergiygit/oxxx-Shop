@@ -39,7 +39,7 @@
 // export default ShopPage
 
 import React, { useState, useMemo, useEffect } from 'react'
-import { useSearchParams, useParams, useNavigate } from 'react-router-dom'
+import { useSearchParams, useParams,  } from 'react-router-dom'
 import Preloader from '../../components/Preloader/Preloader'
 import Section from '../../components/Section/Section'
 import PageTitle from '../../components/Title/PageTitle'
@@ -53,7 +53,7 @@ const ShopPage = () => {
   const { items = [], isLoading } = useShopItems()
   const { category } = useParams()
   const [searchParams, setSearchParams] = useSearchParams()
-  const navigate = useNavigate()
+ 
 
   const [filtered, setFiltered] = useState([])
 
