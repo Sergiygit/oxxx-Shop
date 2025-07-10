@@ -1,47 +1,92 @@
 import React, { useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useShopItems } from '../../hooks/useShopitems';
-import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 
-const ShopCategoryList = ({ filtered, setFiltered }) => {
+const ShopCategoryList = ({ filtered, setFiltered, selectedSize, selectedPCD }) => {
   const { items = [] } = useShopItems();
-  const { category } = useParams();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
 
-  // Зберемо поточні параметри у рядок
-  const queryString = searchParams.toString(); // наприклад 'etFrom=40&etTo=50'
+  const sizes = useMemo(() => [...new Set(items.map(item => item.size).filter(Boolean))], [items]);
 
-  const tabs = useMemo(() => [...new Set(items.map(({ category }) => category))], [items]);
+  const pcds = useMemo(() => {
+    if (!selectedSize) return [];
+    const filteredItems = items.filter(item => item.size === selectedSize);
+    return [...new Set(filteredItems.map(item => item.pcd).filter(Boolean))];
+  }, [selectedSize, items]);
 
-  // фільтруємо автоматично, якщо в URL є категорія
   useEffect(() => {
-    if (category) {
-      const match = items.filter((item) => item.category === category);
-      setFiltered(match);
-    } else {
-      setFiltered([]);
+    let result = items;
+
+    if (selectedSize) {
+      result = result.filter(item => item.size === selectedSize);
     }
-  }, [category, items, setFiltered]);
+
+    if (selectedPCD) {
+      result = result.filter(item => item.pcd === selectedPCD);
+    }
+
+    setFiltered(result);
+  }, [selectedSize, selectedPCD, items, setFiltered]);
+
+  const handleSizeClick = (size) => {
+    const newSize = size === selectedSize ? null : size;
+    navigate(newSize ? `/shop/${newSize}` : '/shop');
+  };
+
+ const handlePCDClick = (pcd) => {
+  const newPCD = pcd === selectedPCD ? null : pcd;
+
+  if (!newPCD) {
+    navigate(`/shop/${selectedSize}`);
+  } else {
+    navigate(`/shop/${selectedSize}/${newPCD}`);
+  }
+};
+
 
   return (
     <div className='shop-list__category'>
-      <li
-        className={`shop-list__category-item ${!category ? 'active' : ''}`}
-        onClick={() => navigate(`/shop${queryString ? `?${queryString}` : ''}`)}
-      >
-        All Categories
-      </li>
-
-      {tabs.map((tab, idx) => (
-        <li
+     {!selectedSize && (
+  <div style={{ marginBottom: '10px' }}>
+ 
+    <div className='shop-list__category-row'>
+      {sizes.map((size, idx) => (
+        <button
           key={idx}
-          className={`shop-list__category-item ${category === tab ? 'active' : ''}`}
+          className={`shop-list__category-item`}
+          onClick={() => handleSizeClick(size)}
         >
-          <Link to={`/shop/category/${encodeURIComponent(tab)}${queryString ? `?${queryString}` : ''}`}>
-            {tab}
-          </Link>
-        </li>
+          {`R${size.replace(/[^\d]/g, '')}`}
+        </button>
       ))}
+    </div>
+  </div>
+)}
+
+
+      {selectedSize && (
+        <div>
+          
+          <div className='shop-list__category-row'>
+             <button
+        onClick={() => navigate('/shop')}
+         className={`shop-list__category-item`}
+          //  style={{ padding: '1rem 2.0625rem' }}
+      >
+        Змінити розмір
+      </button>
+            {pcds.map((pcd, idx) => (
+              <button
+                key={idx}
+                className={`shop-list__category-item ${selectedPCD === pcd ? 'active' : ''}`}
+                onClick={() => handlePCDClick(pcd)}
+              >
+                {pcd}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

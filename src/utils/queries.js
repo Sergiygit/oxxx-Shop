@@ -88,6 +88,8 @@ export const shopItemCollectionQuery = `
 			}
 			discount
 			category
+      size
+    pcd
     imageCollection {
       items {
         url
@@ -112,6 +114,8 @@ export const shopItemQuery = (id) => `
 		}
 		discount
 		category
+    size
+    pcd
     imageCollection {
       items {
         url

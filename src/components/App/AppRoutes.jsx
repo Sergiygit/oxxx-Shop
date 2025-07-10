@@ -20,8 +20,9 @@ const AppRoutes = () => {
 				<Route index element={<Home />} />
 				<Route path='/tour' element={<TourPage />} />
 				<Route path='/shop' element={<ShopPage />} />
-				
-                <Route path='/shop/category/:category' element={<ShopPage />} />
+				<Route path='/shop/:size' element={<ShopPage />} />
+                <Route path='/shop/:size/:pcd' element={<ShopPage />} />
+
                <Route path='/shop/product/:id' element={<Product />} />
 
 				<Route path='/news' element={<NewsPage />} />
