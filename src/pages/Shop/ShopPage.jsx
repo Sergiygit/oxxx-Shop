@@ -96,19 +96,13 @@ const ShopPage = () => {
     <Section className="shop-section page">
       <div className="container">
         <PageTitle text="Shop" />
+        {/* <PageTitle image='/images/0-02-05-2ea2b8646444959a9191c5feec65ae5a543694a138425375e851378babbf180d_f52cd4cd5a29a098.jpg' /> */}
 
         {isLoading ? (
           <Preloader />
         ) : (
-          <>
-            <ShopCategoryList
-              filtered={filtered}
-              setFiltered={setFiltered}
-              selectedSize={paramSize}
-              selectedPCD={paramPCD}
-            />
-
-            <ShopFilters
+          <div className='shop-block'>
+   <ShopFilters
               sortOrder={sortOrder}
               setSortOrder={setSortOrder}
               filterEtFrom={filterEtFrom}
@@ -118,12 +112,22 @@ const ShopPage = () => {
               handleClearEtFilter={handleClearEtFilter}
             />
 
+           <div>
+             <ShopCategoryList
+              filtered={filtered}
+              setFiltered={setFiltered}
+              selectedSize={paramSize}
+              selectedPCD={paramPCD}
+            />
+
+
             <ul className="shop-list">
               {sortedItems.map(el => (
                 <ShopCard key={el.sys.id} el={el} />
               ))}
             </ul>
-          </>
+           </div>
+          </div>
         )}
       </div>
     </Section>

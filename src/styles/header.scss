@@ -6,6 +6,7 @@
 		justify-content: flex-end;
 		gap: 1.875rem;
 		align-items: center;
+	
 		&-cart {
 			gap: 2px;
 			display: flex;
@@ -14,6 +15,7 @@
 	}
 }
 header {
+		background-color: var(--dark);
 	padding-top: 1.25rem;
 	display: grid;
 	grid-template-columns: 1fr max-content 1fr 0fr;

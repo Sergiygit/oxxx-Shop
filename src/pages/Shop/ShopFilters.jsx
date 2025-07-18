@@ -19,6 +19,8 @@ const ShopFilters = ({
         alignItems: 'center',
         flexWrap: 'wrap',
       }}
+
+      className="shop-block_left"
     >
       <label>
         Сортувати за ціною:{' '}
