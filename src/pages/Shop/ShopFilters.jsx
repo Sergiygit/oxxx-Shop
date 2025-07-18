@@ -1,6 +1,3 @@
-// src/pages/Shop/ShopFilters.jsx
-
-
 const ShopFilters = ({
   sortOrder,
   setSortOrder,
@@ -10,54 +7,87 @@ const ShopFilters = ({
   handleEtToChange,
   handleClearEtFilter
 }) => {
-  return (
-    <div
-      style={{
-        margin: '1rem 0',
-        display: 'flex',
-        gap: '1rem',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-      }}
+  const containerStyle = {
+    color: 'black',
+    padding: '16px',
+    backgroundColor: '#fff',
+    border: '1px solid #ddd',
+    borderRadius: '10px',
+    maxWidth: '300px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    fontFamily: 'sans-serif',
+  };
 
-      className="shop-block_left"
-    >
-      <label>
-        Сортувати за ціною:{' '}
+  const blockStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px',
+  };
+
+  const labelStyle = {
+    fontWeight: '500',
+    fontSize: '14px',
+  };
+
+  const inputStyle = {
+    padding: '6px 10px',
+    fontSize: '14px',
+    borderRadius: '6px',
+    border: '1px solid #ccc',
+    color: 'black'
+  };
+
+  const buttonStyle = {
+    padding: '8px',
+    backgroundColor: '#f0f0f0',
+    border: '1px solid #ccc',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '14px',
+    marginTop: '8px',
+  };
+
+  return (
+    <div style={containerStyle}>
+      <div style={blockStyle}>
+        <label style={labelStyle}>Сортувати за ціною:</label>
         <select
           value={sortOrder}
           onChange={e => setSortOrder(e.target.value)}
+          style={inputStyle}
         >
           <option value="asc">Від дешевших до дорожчих</option>
           <option value="desc">Від дорожчих до дешевших</option>
         </select>
-      </label>
+      </div>
 
-      <label>
-        Виліт ET від:{' '}
+      <div style={blockStyle}>
+        <label style={labelStyle}>Виліт ET від:</label>
         <input
           type="number"
           placeholder="40"
           value={filterEtFrom}
           onChange={handleEtFromChange}
-          style={{ width: '80px' }}
+          style={inputStyle}
           min={0}
         />
-      </label>
+      </div>
 
-      <label>
-        Виліт ET до:{' '}
+      <div style={blockStyle}>
+        <label style={labelStyle}>Виліт ET до:</label>
         <input
           type="number"
           placeholder="50"
           value={filterEtTo}
           onChange={handleEtToChange}
-          style={{ width: '80px' }}
+          style={inputStyle}
           min={0}
         />
-      </label>
+      </div>
 
-      <button onClick={handleClearEtFilter}>
+      <button onClick={handleClearEtFilter} style={buttonStyle}>
         Скинути фільтр ET
       </button>
     </div>
@@ -65,3 +95,4 @@ const ShopFilters = ({
 };
 
 export default ShopFilters;
+

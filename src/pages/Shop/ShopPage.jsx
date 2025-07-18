@@ -36,7 +36,7 @@ const ShopPage = () => {
   }, [etFromParam, etToParam])
 
   const baseItems = filtered.length ? filtered : items
-
+console.log(baseItems)
   // фільтрація по ET
   const filteredByEt = useMemo(() => {
     if (!filterEtFrom && !filterEtTo) return baseItems
@@ -135,3 +135,5 @@ const ShopPage = () => {
 }
 
 export default ShopPage
+
+
